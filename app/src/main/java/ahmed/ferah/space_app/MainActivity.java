@@ -9,8 +9,14 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
+    RecyclerView recycleView ;
+    String s1[] , s2[];
+
+    int images[] = {R.drawable.eearth,R.drawable.jjupiter,R.drawable.mmars,R.drawable.mmercury,R.drawable.nneptune,R.drawable.ppluto,R.drawable.ssaturne,R.drawable.uuranus,R.drawable.vvenus};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +32,15 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+
+        recycleView = findViewById(R.id.recycleView);
+
+        s1 = getResources().getStringArray(R.array.planet_items);
+        s2 = getResources().getStringArray(R.array.descriptions);
+
+        MyAdapter myAdapter = new MyAdapter(this,s1 ,s2,images);
+        recycleView.setAdapter(myAdapter);
+        recycleView.setLayoutManager(new LinearLayoutManager(this));
     }
 
 }

@@ -5,4 +5,30 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_quiz">Quiz</string>
     <string name="title_compte">Compte</string>
+    
+    <string-array name="planet_items">
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Mercury</item>
+        <item>Neptune</item>
+        <item>Pluto</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Venus</item>
+
+
+    </string-array>
+
+    <string-array name="descriptions">
+        <item>This is a description</item>
+        <item>This is a description</item>
+        <item>This is a description</item>
+        <item>This is a description</item>
+        <item>This is a description</item>
+        <item>This is a description</item>
+        <item>This is a description</item>
+        <item>This is a description</item>
+        <item>This is a description</item>
+    </string-array>
 </resources>
